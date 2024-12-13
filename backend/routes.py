@@ -98,7 +98,7 @@ def update_picture(id):
             return {"message": "picture not found"}, 404
         for key in request.json:
             picture[key] = request.json[key]
-        return picture, 200
+        return picture, 201
     except Exception as e:
         return {"message": f"Internal server error{e}"}, 500
 
